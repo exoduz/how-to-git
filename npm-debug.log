@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'dist-tag',
+1 verbose cli   'add',
+1 verbose cli   'testing@1.1.1',
+1 verbose cli   '[new version]' ]
+2 info using npm@2.9.0
+3 info using node@v0.12.2
+4 verbose dist-tag add [new version] to testing@1.1.1
+5 silly mapToRegistry name testing
+6 silly mapToRegistry using default registry
+7 silly mapToRegistry registry http://localhost:15443/
+8 silly mapToRegistry uri http://localhost:15443/testing
+9 verbose request uri http://localhost:15443/-/package/testing/dist-tags
+10 verbose request no auth needed
+11 info attempt registry request try #1 at 5:09:15 PM
+12 verbose request id ee1d7a431f13d66c
+13 http request GET http://localhost:15443/-/package/testing/dist-tags
+14 http 404 http://localhost:15443/-/package/testing/dist-tags
+15 verbose headers { 'content-type': 'application/json',
+15 verbose headers   date: 'Tue, 05 May 2015 09:09:15 GMT',
+15 verbose headers   connection: 'keep-alive',
+15 verbose headers   'transfer-encoding': 'chunked' }
+16 verbose stack Error: missing : -/package/testing/dist-tags
+16 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+16 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+16 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:368:22)
+16 verbose stack     at Request.emit (events.js:110:17)
+16 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1219:14)
+16 verbose stack     at Request.emit (events.js:129:20)
+16 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1167:12)
+16 verbose stack     at IncomingMessage.emit (events.js:129:20)
+16 verbose stack     at _stream_readable.js:908:16
+16 verbose stack     at process._tickCallback (node.js:355:11)
+17 verbose statusCode 404
+18 verbose cwd /Users/robinroyjulius/Sites/how-to-npm
+19 error Darwin 14.3.0
+20 error argv "node" "/usr/local/bin/npm" "dist-tag" "add" "testing@1.1.1" "[new version]"
+21 error node v0.12.2
+22 error npm  v2.9.0
+23 error code E404
+24 error 404 missing : -/package/testing/dist-tags
+25 verbose exit [ 1, true ]
